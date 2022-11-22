@@ -50,6 +50,11 @@ class Queue{
 	{
 		li.display();
 	}
+	
+	public void dequeue()
+	{
+		li.deleteFirst();
+	}
 }
 
 public class StackQueue {
@@ -72,6 +77,9 @@ public class StackQueue {
 		qu.enqueue(56);
 		qu.enqueue(30);
 		qu.enqueue(70);
+		qu.display();
+		System.out.println("dequeuing queue");
+		qu.dequeue();
 		qu.display();
 	}
 
