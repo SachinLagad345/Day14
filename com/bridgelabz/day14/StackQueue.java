@@ -13,6 +13,28 @@ class Stack{
 	{
 		li.display();
 	}
+	
+	public Comparable<Integer> peak()
+	{
+		if(li.head == null)
+		{
+			System.out.println("Stack is empty!");
+			return null;
+		}
+		return li.head.data;
+	}
+	
+	public Comparable<Integer> pop()
+	{
+		if(li.head == null)
+		{
+			System.out.println("Stack is empty!");
+			return null;
+		}
+		Comparable<Integer> data = li.head.data;
+		li.head = li.head.next;
+		return data;
+	}
 }
 
 public class StackQueue {
@@ -23,6 +45,12 @@ public class StackQueue {
 		st.push(70);
 		st.push(30);
 		st.push(56);
+		st.display();
+		
+		
+		System.out.println("peak element from stack = " + st.peak());
+		st.display();
+		System.out.println("popping element from stack = "+ st.pop());
 		st.display();
 	}
 
